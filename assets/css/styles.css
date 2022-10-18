@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* COLORS */
+/* Theme 1 */
+/* Backgrounds */
+/* Keys */
+/* Text */
+/* Theme 2 */
+/* Backgrounds */
+/* Keys */
+/* Text */
+/* END COLORS */
+html[data-theme="light"] {
+  --color-background-main: #e6e6e6;
+  --color-keypad: #d1cccc;
+  --color-screen: #ededed;
+  --color-key-background-main: #e5e4e1;
+  --color-key-background-main_shadow: #a69d91;
+  --color-key-background-equals: #ca5502;
+  --color-key-background-equals_shadow: #893901;
+  --color-key-background-delete: #377f86;
+  --color-key-background-delete_shadow: #1b5f65;
+  --color-text: white;
+  --color-key-text: #35352c;
+  --color-title: #35352c;
+}
+
+html[data-theme="dark"] {
+  --color-background-main: #3a4764;
+  --color-keypad: #232c43;
+  --color-screen: #182034;
+  --color-key-background-main: #eae3dc;
+  --color-key-background-main_shadow: #b4a597;
+  --color-key-background-equals: #d03f2f;
+  --color-key-background-equals_shadow: #93261a;
+  --color-key-background-delete: #637097;
+  --color-key-background-delete_shadow: #404e72;
+  --color-text: white;
+  --color-key-text: #444b5a;
+  --color-title: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--color-background-main);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  max-width: 400px;
+  width: 100%;
+  margin: 15px;
+}
+
+main .headerCalculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+main .headerCalculator .title {
+  color: var(--color-title);
+  font-size: 22px;
+}
+
+main .headerCalculator .containerTheme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .headerCalculator .containerTheme .titleTheme {
+  margin-right: 25px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--color-title);
+}
+
+main .headerCalculator .containerTheme .containerSwitch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .headerCalculator .containerTheme .containerSwitch .containerNumbers {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4px;
+}
+
+main .headerCalculator .containerTheme .containerSwitch .containerNumbers p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-title);
+}
+
+main .headerCalculator .containerTheme .containerSwitch .containerInputSwitch {
+  background-color: var(--color-keypad);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3px 4px;
+  border-radius: 30px;
+}
+
+main .headerCalculator .containerTheme .containerSwitch .containerInputSwitch .radioSwitcher {
+  height: 15px;
+  width: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--color-key-background-equals);
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+main .headerCalculator .containerTheme .containerSwitch .containerInputSwitch .radioSwitcher:last-child {
+  margin-right: 0;
+}
+
+main .headerCalculator .containerTheme .containerSwitch .containerInputSwitch .radioSwitcher.show {
+  opacity: 1;
+}
+
+main #calculatorScreen {
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: 8px;
+  border: none;
+  outline: 0;
+  font-size: 40px;
+  font-family: inherit;
+  font-weight: 700;
+  text-align: right;
+  margin-bottom: 20px;
+  color: var(--color-title);
+  background-color: var(--color-screen);
+}
+
+main .containerKeys {
+  padding: 25px;
+  background-color: var(--color-keypad);
+  border-radius: 8px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+main .containerKeys .key {
+  border: none;
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-key-text);
+  background-color: var(--color-key-background-main);
+  padding: 12px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: none;
+  transition: none;
+  position: relative;
+  -webkit-box-shadow: 0 3px 0 0 var(--color-key-background-main_shadow);
+          box-shadow: 0 3px 0 0 var(--color-key-background-main_shadow);
+}
+
+main .containerKeys .key.reset, main .containerKeys .key.delete {
+  background-color: var(--color-key-background-delete);
+  -webkit-box-shadow: 0 3px 0 0 var(--color-key-background-delete_shadow);
+          box-shadow: 0 3px 0 0 var(--color-key-background-delete_shadow);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 22px;
+}
+
+main .containerKeys .key.reset {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+main .containerKeys .key.equals {
+  grid-column: 3/-1;
+  background-color: var(--color-key-background-equals);
+  -webkit-box-shadow: 0 3px 0 0 var(--color-key-background-equals_shadow);
+          box-shadow: 0 3px 0 0 var(--color-key-background-equals_shadow);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 22px;
+}
+
+main .containerKeys .key:active {
+  top: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media (max-width: 320px) {
+  main .containerKeys {
+    padding: 15px;
+    grid-gap: 15px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
