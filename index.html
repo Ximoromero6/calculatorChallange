@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="title" content="Calculator app | Ximo Romero">
+    <meta name="description" content="Your challenge is to build out this calculator app and get it looking as close to the design as possible.">
+    <meta name="keywords" content="js calculator, css challange, web design">
+    <meta name="robots" content="index, follow">
     <title>Calculator app | Ximo Romero</title>
 </head>
 
@@ -24,33 +28,34 @@
                         <p>3</p>
                     </div>
                     <div class="containerInputSwitch">
-                        <input type="radio" name="switcher" id="firstTheme" class="radioSwitcher show" data-theme="dark">
-                        <input type="radio" name="switcher" id="secondTheme" class="radioSwitcher" data-theme="light">
-                        <input type="radio" name="switcher" id="thirdTheme" class="radioSwitcher" data-theme="purple">
+                        <input type="radio" name="switcher" id="firstTheme" class="radioSwitcher show" data-theme="dark" aria-label="Dark theme">
+                        <input type="radio" name="switcher" id="secondTheme" class="radioSwitcher" data-theme="light" aria-label="Light theme">
+                        <input type="radio" name="switcher" id="thirdTheme" class="radioSwitcher" data-theme="purple" aria-label="Purple theme">
                     </div>
                 </div>
             </div>
         </div>
-        <input type="text" readonly id="calculatorScreen" value="0">
+        <input type="text" readonly id="showPreviousNumber" data-previous-operand aria-label="Previous number">
+        <input type="text" readonly id="calculatorScreen" value="0" data-current-operand aria-label="Actual number">
         <div class="containerKeys">
-            <button class="key" data-key="7">7</button>
-            <button class="key" data-key="8">8</button>
-            <button class="key" data-key="9">9</button>
-            <button class="key delete" data-key="del">DEL</button>
-            <button class="key" data-key="4">4</button>
-            <button class="key" data-key="5">5</button>
-            <button class="key" data-key="6">6</button>
-            <button class="key" data-key="+">+</button>
-            <button class="key" data-key="1">1</button>
-            <button class="key" data-key="2">2</button>
-            <button class="key" data-key="3">3</button>
-            <button class="key" data-key="-">-</button>
-            <button class="key" data-key=".">.</button>
-            <button class="key" data-key="0">0</button>
-            <button class="key" data-key="/">/</button>
-            <button class="key" data-key="x">x</button>
-            <button class="key reset" data-key="reset">RESET</button>
-            <button class="key equals" data-key="=">=</button>
+            <button class="key" data-number>7</button>
+            <button class="key" data-number>8</button>
+            <button class="key" data-number>9</button>
+            <button class="key delete" data-delete>DEL</button>
+            <button class="key" data-number>4</button>
+            <button class="key" data-number>5</button>
+            <button class="key" data-number>6</button>
+            <button class="key" data-operation>+</button>
+            <button class="key" data-number>1</button>
+            <button class="key" data-number>2</button>
+            <button class="key" data-number>3</button>
+            <button class="key" data-operation>-</button>
+            <button class="key" data-number>.</button>
+            <button class="key" data-number>0</button>
+            <button class="key" data-operation>/</button>
+            <button class="key" data-operation>x</button>
+            <button class="key reset" data-all-clear>RESET</button>
+            <button class="key equals" data-equals>=</button>
         </div>
     </main>
 

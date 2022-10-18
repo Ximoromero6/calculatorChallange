@@ -263,6 +263,20 @@ main {
             }
         }
     }
+    #showPreviousNumber {
+        width: 100%;
+        position: relative;
+        top: 20px;
+        text-align: right;
+        border: none;
+        border-radius: 8px 8px 0 0;
+        font-family: inherit;
+        font-weight: 600;
+        color: var(--color-title);
+        background-color: var(--color-screen);
+        font-size: 14px;
+        padding: 4px 4px 2px 4px;
+    }
     #calculatorScreen {
         width: 100%;
         padding: 30px 25px;
