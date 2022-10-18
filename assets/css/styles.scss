@@ -90,6 +90,45 @@ $Very_dark_grayish_yellow: hsl(60,
 10%,
 19%);
 
+/* Theme 3 */
+
+$Very_dark_violet_main: hsl(268,
+75%,
+9%); // (main background)
+$Very_dark_violet_background: hsl(268,
+71%,
+12%); // (toggle background, keypad background, screen background)
+
+/* Keys */
+
+$Dark_violet: hsl(281,
+89%,
+26%); // (key background)
+$Vivid_magenta: hsl(285,
+91%,
+52%); // (key shadow)
+$Pure_cyan: hsl(176,
+100%,
+44%); // (key background, toggle)
+$Soft_cyan: hsl(177,
+92%,
+70%); // (key shadow)
+$Very_dark_violet: hsl(268,
+47%,
+21%); // (key background)
+$Dark_magenta: hsl(290,
+70%,
+36%); // (key shadow)
+
+/* Text */
+
+$Light_yellow: hsl(52,
+100%,
+62%);
+$Very_dark_blue: hsl(198,
+20%,
+13%);
+
 /* END COLORS */
 
 html[data-theme="light"] {
@@ -99,6 +138,7 @@ html[data-theme="light"] {
     --color-key-background-main: #{$Light_grayish_yellow};
     --color-key-background-main_shadow: #{$Dark_grayish_orange};
     --color-key-background-equals: #{$Orange};
+    --color-key-color-equals: #{$White};
     --color-key-background-equals_shadow: #{$Dark_orange};
     --color-key-background-delete: #{$Dark_moderate_cyan};
     --color-key-background-delete_shadow: #{$Very_dark_cyan};
@@ -114,12 +154,29 @@ html[data-theme="dark"] {
     --color-key-background-main: #{$Light_grayish_orange};
     --color-key-background-main_shadow: #{$Grayish_orange};
     --color-key-background-equals: #{$Red};
+    --color-key-color-equals: #{$White};
     --color-key-background-equals_shadow: #{$Dark_red};
     --color-key-background-delete: #{$Desaturated_dark_blue_background};
     --color-key-background-delete_shadow: #{$Desaturated_dark_blue_shadow};
     --color-text: #{$White};
     --color-key-text: #{$Very_dark_grayish_blue};
     --color-title: #{$White};
+}
+
+html[data-theme="purple"] {
+    --color-background-main: #{$Very_dark_violet_main};
+    --color-keypad: #{$Very_dark_violet_background};
+    --color-screen: #{$Very_dark_violet_background};
+    --color-key-background-main: #{$Very_dark_violet};
+    --color-key-background-main_shadow: #{$Dark_magenta};
+    --color-key-background-equals: #{$Pure_cyan};
+    --color-key-color-equals: #{$Very_dark_blue};
+    --color-key-background-equals_shadow: #{$Soft_cyan};
+    --color-key-background-delete: #{$Dark_violet};
+    --color-key-background-delete_shadow: #{$Vivid_magenta};
+    --color-text: #{$White};
+    --color-key-text: #{$Light_yellow};
+    --color-title: #{$Light_yellow};
 }
 
 * {
@@ -260,7 +317,7 @@ main {
                 grid-column: 3/-1;
                 background-color: var(--color-key-background-equals);
                 box-shadow: 0 3px 0 0 var(--color-key-background-equals_shadow);
-                color: var(--color-text);
+                color: var(--color-key-color-equals);
                 font-weight: 600;
                 font-size: 22px;
             }
